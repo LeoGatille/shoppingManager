@@ -1,5 +1,3 @@
-class List extends React.Component {
- render() {
-
- }
+import React from 'react'
+export class List extends React.Component {
 }
