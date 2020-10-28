@@ -1,0 +1,11 @@
+section {
+    transition: width ease-out 0.2s;
+    height: 100vh;
+    background-color: blue;
+}
+.close {
+    width: 0;
+}
+.open {
+    width: 100px;
+}

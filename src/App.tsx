@@ -1,39 +1,55 @@
 import React from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { addNote } from './actions';
 import './App.scss';
-import { FilledInput } from './myTests/Form';
-import { Nav } from './myTests/nav';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import { NewNoteInput } from './NewNoteInput';
+// import { NotesState } from './noteReducer';
+import { Sidebar } from './sidebar/Sidebar'
 function App() {
+  // const notes = useSelector<NotesState, NotesState['notes']>(state => state.notes);
+  // const dispatch = useDispatch();
+  // const onAddNote = (note: string) => {
+  //   dispatch(addNote(note));
+  // }
   return (
     <>
-      <Router>
-        <Nav />
-          <Switch>
-            <Route path="/input">
-              <FilledInput />
-            </Route>
-            <Route path="/users">
-              <Users />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-      </Router>
+      <Sidebar />
+      {/* <NewNoteInput addNote={onAddNote} />
+      <ul>
+        {notes.map(note => {
+          return <li key={note}>{note}</li>
+        })}
+        <li>Some note</li>
+      </ul> */}
     </>
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}
+//* Router implemented
+// function App() {
+//   return (
+//     <>
+//       <Router>
+//         <Nav></Nav>
+//           <Switch>
+//             <Route path="/input">
+//             </Route>
+//             <Route path="/users">
+//               <Users />
+//             </Route>
+//             <Route path="/">
+//               <Home />
+//             </Route>
+//           </Switch>
+//       </Router>
+//     </>
+//   );
+// }
+// function Home() {
+//   return <h2>Home</h2>;
+// }
+// function Users() {
+//   return <h2>Users</h2>;
+// }
 
 export default App;
