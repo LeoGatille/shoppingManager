@@ -1,11 +1,14 @@
 section {
-    transition: width ease-out 0.2s;
-    height: 100vh;
-    background-color: rgb(211, 175, 17);
+  transition: width ease-out 0.2s;
+  height: 100vh;
+  background-color: rgb(211, 175, 17);
+  position: fixed;
+  z-index: 1000;
+//   top: 0;
 }
 .close {
-    width: 0;
+  width: 0;
 }
 .open {
-    width: 200px;
+  width: 200px;
 }
