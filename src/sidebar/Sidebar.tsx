@@ -1,21 +1,22 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {toggleSidebar } from './sidebarActions';
+import { toggleSidebar } from './sidebarActions';
 import './sidebar.scss'
-import {SidebarState} from './sibearReducers'
+import { SidebarState } from './sibearReducers'
 
-export const Sidebar: React.FC = () => {
+export type SidebarProps = {state: string}
+
+export const Sidebar: React.FC<SidebarProps> = ({state}: SidebarProps) => {
     const sidebarState: SidebarState = useSelector<any, any>(state => state.sidebarReducer);
-    // const [toDisplay, setToDisplay] = React.useState(sidebarState);
     const dispatch = useDispatch();
     const onSidebarClick = () => {
         dispatch(toggleSidebar(sidebarState.state))
     }
+    // const bodyOverlyClass = 
     return (
         <>
-            <section className={sidebarState.className}>
-                <button onClick={onSidebarClick}>Toggle sidebar state</button>
-                
+            <section className={state}>
+                {/* <button onClick={onSidebarClick}>Toggle sidebar state</button> */}
             </section>
             {/* <h1>{sidebarState}</h1> */}
         </>

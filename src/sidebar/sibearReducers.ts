@@ -1,21 +1,21 @@
 
 export type SidebarState = {
     state: string;
-    className: string
+    payload: string
 }
-const defaultSidebarState: SidebarState = { state: 'CLOSE_SIDEBAR', className: 'close' }
+const defaultSidebarState: SidebarState = { state: 'CLOSE_SIDEBAR', payload: 'close' }
 
 export const sidebarReducer = (state: SidebarState = defaultSidebarState, action: any): SidebarState => {
     switch (action.type) {
         case "CLOSE_SIDEBAR":
             return {
                 state: "OPEN_SIDEBAR",
-                className: 'open'
+                payload: 'open'
             };
         case "OPEN_SIDEBAR":
             return {
                 state: "CLOSE_SIDEBAR",
-                className: 'close'
+                payload: 'close'
             };
         default:
             return state;

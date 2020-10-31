@@ -2,9 +2,9 @@ import React from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { addNote } from './actions';
 import './App.scss';
+import { Nav } from './nav/nav';
 // import { NewNoteInput } from './NewNoteInput';
 // import { NotesState } from './noteReducer';
-import { Sidebar } from './sidebar/Sidebar'
 function App() {
   // const notes = useSelector<NotesState, NotesState['notes']>(state => state.notes);
   // const dispatch = useDispatch();
@@ -13,14 +13,7 @@ function App() {
   // }
   return (
     <>
-      <Sidebar />
-      {/* <NewNoteInput addNote={onAddNote} />
-      <ul>
-        {notes.map(note => {
-          return <li key={note}>{note}</li>
-        })}
-        <li>Some note</li>
-      </ul> */}
+      <Nav />
     </>
   );
 }

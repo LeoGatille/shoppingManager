@@ -1,0 +1,15 @@
+header {
+  padding: 0 10px;
+  background-color: blue;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  img {
+    margin: auto;
+    display: block;
+  }
+  .burger {
+    color: white;
+    cursor: pointer;
+  }
+}
