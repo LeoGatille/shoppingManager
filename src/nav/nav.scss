@@ -1,5 +1,5 @@
 header {
-  padding: 0 10px;
+  padding: 0 20px;
   background-color: blue;
   height: 50px;
   display: flex;
@@ -8,11 +8,14 @@ header {
     margin: auto;
     display: block;
   }
-  .burger {
-    color: white;
+  .burger-container {
+    padding: 10px;
     cursor: pointer;
+    .burger {
+      color: white;
+    }
   }
 }
 .body-overlay {
-    width: 100%;
+  width: 100%;
 }

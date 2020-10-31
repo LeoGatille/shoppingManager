@@ -19,7 +19,9 @@ export const Nav: React.FC = () => {
     return (
         <>
             <header className="my-header">
-                <FontAwesomeIcon onClick={onBurgerClick} className="burger" icon={faBars} />
+                <div onClick={onBurgerClick} className="burger-container">
+                    <FontAwesomeIcon  className="burger" icon={faBars} />
+                </div>
                 <img width="50px" src={logo} alt="shopping manager's logo metling a note book with a shopping kart" />
             </header>
             <Sidebar state={sidebarState.payload} />
