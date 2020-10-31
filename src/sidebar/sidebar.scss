@@ -1,4 +1,4 @@
-section {
+.sibebar {
   transition: width ease-out 0.2s;
   height: 100vh;
   background-color: rgb(211, 175, 17);
@@ -12,3 +12,4 @@ section {
 .open {
   width: 200px;
 }
+

@@ -4,9 +4,9 @@ import { toggleSidebar } from './sidebarActions';
 import './sidebar.scss'
 import { SidebarState } from './sibearReducers'
 
-export type SidebarProps = {state: string}
+export type SidebarProps = { state: string }
 
-export const Sidebar: React.FC<SidebarProps> = ({state}: SidebarProps) => {
+export const Sidebar: React.FC<SidebarProps> = ({ state }: SidebarProps) => {
     const sidebarState: SidebarState = useSelector<any, any>(state => state.sidebarReducer);
     const dispatch = useDispatch();
     const onSidebarClick = () => {
@@ -15,7 +15,7 @@ export const Sidebar: React.FC<SidebarProps> = ({state}: SidebarProps) => {
     // const bodyOverlyClass = 
     return (
         <>
-            <section className={state}>
+            <section className={'sibebar ' + state}>
                 {/* <button onClick={onSidebarClick}>Toggle sidebar state</button> */}
             </section>
             {/* <h1>{sidebarState}</h1> */}

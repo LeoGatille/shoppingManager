@@ -22,8 +22,8 @@ export const Nav: React.FC = () => {
                 <FontAwesomeIcon onClick={onBurgerClick} className="burger" icon={faBars} />
                 <img width="50px" src={logo} alt="shopping manager's logo metling a note book with a shopping kart" />
             </header>
-            
             <Sidebar state={sidebarState.payload} />
+            <section className={"body-overlay " + sidebarState.payload}></section>
         </>
     )
 }
