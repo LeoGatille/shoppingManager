@@ -15,10 +15,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ state }: SidebarProps) => {
     // const bodyOverlyClass = 
     return (
         <>
-            <section className={'sibebar ' + state}>
-                {/* <button onClick={onSidebarClick}>Toggle sidebar state</button> */}
+            <section className={'sibebar-container ' + state}>
+                <div className="sidebar">
+                    TITI
+                    <div className="sidebar-item">
+                        toto
+                </div>
+                </div>
             </section>
-            {/* <h1>{sidebarState}</h1> */}
         </>
     )
 }

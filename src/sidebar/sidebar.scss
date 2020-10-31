@@ -1,15 +1,25 @@
-.sibebar {
-  transition: width ease-out 0.2s;
+.sibebar-container {
+  transition: transform ease-out 0.2s;
   height: 100vh;
-  background-color: rgb(211, 175, 17);
   position: fixed;
   z-index: 1000;
-//   top: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  .sidebar {
+    background-color: rgb(211, 175, 17);
+    width: 200px;
+    .sidebar-item {
+      position: relative;
+      right: 0;
+    }
+  }
+  //   top: 0;
 }
 .close {
-  width: 0;
+    transform: translate(-200px ,0);
+    //   width: 0;
 }
 .open {
-  width: 200px;
+    transform: translate(0 ,0);
+//   width: 200px;
 }
-
