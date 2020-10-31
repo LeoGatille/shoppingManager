@@ -1,7 +1,7 @@
 $headerHeight: 50px;
 header {
   padding: 0 20px;
-  background-color: blue;
+  background-color: #0f719a;
   height: 50px;
   display: flex;
   align-items: center;
@@ -27,14 +27,17 @@ header {
   }
 }
 .body-overlay {
-  transition: all ease-out 0.2s;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: opacity ease-out 0.2s;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.445);
 }
 .body-overlay.open {
+  width: 100%;
   opacity: 0.6;
 }
 .body-overlay.close {
+  width: 0;
   opacity: 0;
 }

@@ -1,19 +1,17 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { addNote } from './actions';
 import './App.scss';
+import { Body } from './body/body';
 import { Nav } from './nav/nav';
-// import { NewNoteInput } from './NewNoteInput';
-// import { NotesState } from './noteReducer';
 function App() {
-  // const notes = useSelector<NotesState, NotesState['notes']>(state => state.notes);
-  // const dispatch = useDispatch();
-  // const onAddNote = (note: string) => {
-  //   dispatch(addNote(note));
-  // }
   return (
     <>
-      <Nav />
+      <Router>
+        <Nav />
+        <Body />
+      </Router>
     </>
   );
 }

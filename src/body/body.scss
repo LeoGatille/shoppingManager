@@ -1,0 +1,8 @@
+.body-content {
+  width: calc(100% - 40px);
+  height: calc(100vh - 60px);
+  background-color: #2aa2d5;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 60px 20px 0 20px;
+}

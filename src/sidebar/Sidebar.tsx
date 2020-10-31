@@ -1,26 +1,32 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { toggleSidebar } from './sidebarActions';
 import './sidebar.scss'
-import { SidebarState } from './sibearReducers'
+import { Link } from 'react-router-dom';
 
 export type SidebarProps = { state: string }
 
 export const Sidebar: React.FC<SidebarProps> = ({ state }: SidebarProps) => {
-    const sidebarState: SidebarState = useSelector<any, any>(state => state.sidebarReducer);
-    const dispatch = useDispatch();
-    const onSidebarClick = () => {
-        dispatch(toggleSidebar(sidebarState.state))
-    }
-    // const bodyOverlyClass = 
+
     return (
         <>
             <section className={'sibebar-container ' + state}>
                 <div className="sidebar">
-                    TITI
-                    <div className="sidebar-item">
-                        toto
-                </div>
+                    <div className="sidebar-items-container">
+                        <div className="sidebar-item">
+                            <Link to="/lists">
+                                Mes listes
+                        </Link>
+                        </div>
+                        <div className="sidebar-item">
+                            <Link to="/join-list">
+                                Rejoindre une liste
+                        </Link>
+                        </div>
+                        <div className="sidebar-item">
+                            <Link to="/connection">
+                                Connexion
+                        </Link>
+                        </div>
+                    </div>
                 </div>
             </section>
         </>
