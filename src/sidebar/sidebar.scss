@@ -7,19 +7,18 @@
   overflow-x: hidden;
   .sidebar {
     background-color: rgb(211, 175, 17);
+    height: inherit;
     width: 200px;
     .sidebar-item {
       position: relative;
       right: 0;
     }
   }
-  //   top: 0;
 }
-.close {
-    transform: translate(-200px ,0);
-    //   width: 0;
+.sibebar-container.close {
+  transform: translate(-200px, 0);
 }
-.open {
-    transform: translate(0 ,0);
-//   width: 200px;
+.sibebar-container.open {
+  transform: translate(0, 0);
+  box-shadow: 0 0 13px black;
 }

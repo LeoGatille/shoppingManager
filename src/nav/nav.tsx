@@ -12,20 +12,20 @@ export const Nav: React.FC = () => {
 
     const sidebarState: SidebarState = useSelector<any, any>(state => state.sidebarReducer);
     const dispatch = useDispatch();
-    const onBurgerClick = () => {
+    const toggleSidebarState = () => {
         dispatch(toggleSidebar(sidebarState.state))
     }
 
     return (
         <>
             <header className="my-header">
-                <div onClick={onBurgerClick} className="burger-container">
+                <div onClick={toggleSidebarState} className="burger-container">
                     <FontAwesomeIcon  className="burger" icon={faBars} />
                 </div>
                 <img width="50px" src={logo} alt="shopping manager's logo metling a note book with a shopping kart" />
             </header>
             <Sidebar state={sidebarState.payload} />
-            <section className={"body-overlay " + sidebarState.payload}></section>
+            <section onClick={toggleSidebarState} className={"body-overlay " + sidebarState.payload}></section>
         </>
     )
 }
